@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Bhaskara</title>
+    <style>
+        input{
+            text-align: center;
+        }
+        div#res{
+            font: bold 40px Arial;
+            font-size: 40px;
+            font-family:'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo de Delta</h1>
+    <h2>f(x) = ax²*bx*c</h2>
+    <input type="text" placeholder="a" name="txtn1" id="txtn1" size="5">
+    <input type="text" placeholder="b" name="txtn2" id="txtn2" size="5">
+    <input type="text" placeholder="c" name="txtn3" id="txtn3" size="5">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function calcular(){
+            var tn1 = document.querySelector('input#txtn1')
+            var tn2 = document.querySelector('input#txtn2')
+            var tn3 = document.querySelector('input#txtn3')
+            var res = document.querySelector('div#res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var n3 = Number(tn3.value)
+            var delta = (n3**2)-4*n1*n2
+            var deltax = delta**1/2
+            res.innerHTML = `Δ = ${delta}`
+            if(delta < 0){
+                res.innerHTML = `Delta é negativo. <br> 
+                Δ = ${delta}`
+                
+            }else{
+                 res.innerHTML = `Δ = ${delta} <br>
+                X¹ = ${(-n2 + deltax) /2*n1} <br>
+                X² = ${(n2 - deltax)/2*n1}`
+            }
+        }
+    </script>
+
+
+</body>
+</html>

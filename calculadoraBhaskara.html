@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Bhaskara</title>
+    <style>
+        body{
+            background-color: #202126;
+        }
+        main{
+            color: white;
+            text-align: center;
+            background-color:#4e4f55;
+            width: 290px;
+            height: 560px;
+            margin: auto;
+            border-radius: 30px;
+            background: linear-gradient(145deg, #1d1e22, #222329);
+            box-shadow:  28px 28px 57px #0d0d0f, 
+             -28px -28px 57px #33353d;
+        }
+        input{
+            text-align: center;
+            border-radius: 10px;
+            height: 30px;
+            width: 60pt;
+            
+        }
+        #calcular{
+            padding-top: 10px;
+            
+        }
+        
+        div#res{
+            
+            font: bold 40px Arial;
+            
+            font-family:'Times New Roman', Times, serif;
+        }
+        h1{
+            color:white;
+            text-shadow:1px 1px 9px grey;
+            
+        }
+        h2 {
+            color: white;;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <form>
+    <h1>Calculadora de Bhaskara</h1>
+    <h2>f(x) = ax² bx c</h2><br>
+    <input type="number" placeholder="a" name="txtn1" id="txtn1" size="5">
+    <input type="number" placeholder="b" name="txtn2" id="txtn2" size="5">
+    <input type="number" placeholder="c" name="txtn3" id="txtn3" size="5">
+
+
+   <div id="calcular">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <input type="reset" value="Limpar" onclick="limpar() ">
+    </div>
+    <div id="res">Resultado</div>
+    </form>
+    
+
+    <script>
+        function calcular(){
+            var tn1 = document.querySelector('input#txtn1')
+            var tn2 = document.querySelector('input#txtn2')
+            var tn3 = document.querySelector('input#txtn3')
+            var res = document.querySelector('div#res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var n3 = Number(tn3.value)
+            var delta = (n2**2)-4*n1*n3
+
+            res.innerHTML = `Δ = ${delta}`
+            if(delta < 0){
+                res.innerHTML = `Delta é negativo. <br> 
+                Δ = ${delta}`
+                
+            }else{
+                res.innerHTML = `Δ = ${delta} <br><br>
+                 x¹ = ${(-(n2) + (delta**0.5)) /(2*n1)} <br>
+                 x² = ${(-(n2) - (delta**0.5))/(2*n1)}`;
+            }
+                
+            
+
+        }
+    
+    </script>
+    </main>
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        body {
+            background-color: rgb(54, 51, 51);
+            text-align: center;
+        }
+
+        main {
+            height: 550px;
+            width: 400px;
+            text-align: center;
+            background-color: cadetblue;
+            border-radius: 40px;
+            text-align: center;
+        }
+
+        div {
+            text-align: left;
+            padding-left: 20px;
+            padding-top: 5px;
+        }
+
+        div#res {
+            font: bold 20pt Arial;
+        }
+
+        div#button {
+            text-align: right;
+        }
+
+        p {
+            font: bold 30px Arial;
+            text-align: left;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h1>Validação de País</h1>
+
+        De que pais você é: <input type="text" name="txtpa" id="txtpa">
+        <div>
+            <input type="button" value="verificar" onclick="verificar()">
+        </div>
+
+        <div id='res'></div>
+        <script>
+            function verificar() {
+                var txt = window.document.querySelector('input#txtpa')
+                var res = window.document.querySelector('div#res')
+                var pais = (txtpa.value)
+                res.innerHTML = `Você é do ${pais} <br>`
+                if (pais == 'Brasil') {
+                    res.innerHTML += 'Vocé é <strong>BRASILEIRO</strong>'
+                }
+                else {
+                    res.innerHTML += 'Você <strong>ESTRANGEITO</strong>'
+                }
+
+
+            }
+
+
+        </script>
+</body>
+
+</html>

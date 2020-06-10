@@ -1,0 +1,56 @@
+body{
+    background: rgb(72, 72, 175) ;
+    font: bold 15pt Arial;
+    color: black;
+    text-align: center;
+    
+}
+
+header{
+    color: white;
+    text-align: center;
+    font: bold 30pt white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input{
+    border-radius: 10px;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 60px;
+    padding: 15px;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    border-radius: 30px;
+    word-wrap: break-word;
+    break-inside: auto;
+    
+}
+div{
+    text-align: left;
+    margin: auto;
+    padding: 5px;
+
+}
+
+input[type=button]{
+    width: 108px; 
+    height: 36px;
+     
+    
+}
+
+input[type=number]{
+   width: 100px; 
+   height: 30px;
+}
+
+select#flista{
+    width: 150px;
+}
+
+    

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tpt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: bold 20pt Times;
+
+        }
+    </style>
+
+</head>
+<body>
+   <script>
+       var nome = prompt('Qual é o seu nome? ')
+       var idade = Number(prompt('Qual a sua idade? '))
+       var sal = Number(prompt('Digite o valor do seu salário: '))
+       document.write(`Seu nome tem ${nome.length} letras.<br>`)
+       document.write(`Seu nome em letras maiúsculas é ${nome.toUpperCase(nome)}<br>`)
+       document.write(`Você nasceu no ano de ${2020 - idade}<br>`)
+       document.writeln(`Você recebe ${sal.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
+   </script> 
+</body>
+</html>

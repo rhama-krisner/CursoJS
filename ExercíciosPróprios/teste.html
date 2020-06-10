@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: bold 20pt Times;
+        }
+        .formula{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+   <script>
+        alert('Digite os respectivos valores de a, b, e c');
+        var a = Number(prompt('Digite o valor de a: '))  
+        var b = Number(prompt('Digite o valor de b: '))
+        var c = Number(prompt('Digite o valor de c: '))
+        var delta = Math.pow(b, 2) - 4 * a * c
+    if (delta < 0){
+        document.write('Valor de Delta é negativo. Impossível prosseguir<br>')
+        document.write(`Δ = ${delta}`)
+    } else{
+        
+        document.write('f(x) = ax + bx² + c <br>');
+        document.write(`a = ${a} <br> b = ${b} <br> c = ${c}<br><br>`);
+        document.write(`Δ = ${delta}<br> <br>`);
+
+        document.write('-b -√Δ / 2 • a <br> b + √Δ / 2 • a <br>')
+        var x1 = -b+(Math.sqrt(delta))/2*a
+        var x2 = b+(Math.sqrt(delta)/2*a)
+        document.write(`x¹ = ${x1} <br> x² = ${x2}<br>`)
+    }
+
+
+   </script> 
+   
+
+</body>
+</html>
